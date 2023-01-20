@@ -1,0 +1,59 @@
+/* @theme Modern */
+@import 'default';
+
+:root {
+    font-family: "BIZ UDPGothic";
+    --main-color: rgb(0,113,188);
+    --accent-color: rgb(224,50,83);
+  }
+
+table {width: 90%;display:table;}
+thead th {text-align: center !important;}
+h2 {
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    padding: 20px 40px;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 5px solid #aaa;
+}
+em strong{
+    font-size: 120%;
+    color:var(--accent-color);
+    font-style: normal;
+}
+
+strong{font-size: 120%;color:var(--main-color);}
+
+section::after {
+    font-size: 1em;
+    color:#ddd;
+  }
+
+/* 目次スライド */
+section.toc {background: linear-gradient(to right, var(--main-color) 150px, #fff 0px);}
+section.toc h2 {border-bottom:0 ; padding: 20px 20px;color: #fff; }
+section.toc>ul {list-style-type: none;position: relative;left: 50px;}
+section.toc a {color: #333;}
+section.toc p {position: absolute;top: 0px;left: 180px;padding-top:20px;color: #333 ;font-weight: bold;}
+section.toc footer{left:180px;}
+/* タイトル(1枚目)・区切り */
+section#\0031  h1{
+    font-size: 2em;
+    text-align: center;
+    color: #333 ;
+}
+section.sep h2{
+    font-size: 2em;
+    position: relative;
+    padding: 0;
+    border-bottom:0 ;
+}
+section#\0031  h2,section.sep h3{
+    font-size: 1.5em;
+    position: relative;
+    padding: 0;
+    border-bottom:0 ;
+    text-align: center;
+}
