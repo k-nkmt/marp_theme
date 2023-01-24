@@ -1,0 +1,109 @@
+/* @theme NS1 */
+
+@import 'default';
+
+:root {
+    font-family: "ＭＳ Ｐゴシック", "MS PGothic";
+    --main-color: rgb(00,00,96);
+    --accent-color: rgb(255,00,00);
+    --head-color: rgb(255,255,0) ;
+    --logo:url(https://www.nippon-shinyaku.co.jp/company_profile/lib/img/brand/img_symbolMark.png)
+  }
+
+section {
+    width: 960px;
+    height: 720px;
+}
+
+table {width: 90%;display:table;}
+thead th {text-align: center !important;}
+
+h2 {
+    position: absolute;top: 0px; left: 0px;display: inline-block;width: 100%;
+    padding:0px;
+    font-size: 44px;
+    color:var(--head-color);
+    background-color: var(--main-color);
+}
+
+h2::before{
+    content: '';
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-right:40px;
+    background-image: var(--logo);
+    background-size: contain;
+    vertical-align: middle;
+    background-color:#fff ;
+}
+strong{font-size: 120%;color:var(--main-color);}
+
+em strong{
+    color:var(--accent-color);
+    font-style: normal;
+}
+section::after {
+    bottom: 0px;
+}
+
+footer {
+    text-align: right;
+    color:#333 ;
+    padding: 5px 0px;
+    width:90%;
+    background: 
+    var(--logo)
+    no-repeat right 230px center/25px,
+    linear-gradient(90deg, var(--main-color) 0%, rgb(255,255,255) 80%)
+    ;
+    bottom: 0px;
+    left:0px ;
+}
+
+/* タイトル(1枚目)・区切り */
+section#\0031  h1{
+    text-align: center;
+    color:initial;
+    font-size: 40px;
+}
+section.sep h2{
+    font-size: 44px;
+    position: relative;
+    padding: 0;
+    color:initial;
+    background-color: initial;
+}
+
+section#\0031, section.sep{
+    background: 
+    var(--logo)
+    no-repeat left -100px center/650px;
+    background-color: #fff;
+    z-index: -10;
+}
+
+section#\0031::after, section.sep::after {
+    content: '';
+    background-color: rgba(255,255,255,.85);
+    height: 100%;
+    width:100%;
+    z-index: -1;
+  }
+
+section.sep h2::before,section#\0031  h2::before{
+    background: initial;
+}
+
+section#\0031  h2,section.sep h3{
+    font-size: 32px;
+    position: relative;
+    padding: 0;
+    border-bottom:0 ;
+    color:initial;
+    background-color: initial;
+}
+
+section#\0031 > footer, section.sep > footer{
+    background: initial;
+}
